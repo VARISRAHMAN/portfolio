@@ -190,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { keys: ['skills', 'skill'], ans: "Ethical hacking, penetration testing, vulnerability assessment, web security, network security, bug bounty, red teaming, blue teaming, malware analysis, and digital forensics." },
             { keys: ['what does', 'do', 'role'], ans: "Varis Rahman specializes in ethical hacking, penetration testing, and vulnerability assessment." },
             { keys: ['who is', 'who', 'bio', 'about'], ans: "Varis Rahman is a cybersecurity student and aspiring security researcher based in Calicut, Kerala, India. He focuses on penetration testing, vulnerability assessment, and web security." },
+            { keys: ['project', 'projects', 'vulnerable', 'portfolio'], ans: "Varis has built a Vulnerable Order Portal, which is an intentionally vulnerable web application mapped to OWASP Top 10 vulnerabilities for testing and education." },
             { keys: ['hi', 'hello', 'hey'], ans: "Hello! You can ask me about Varis's skills, tools, experience, goals, or contact information." }
         ];
 
