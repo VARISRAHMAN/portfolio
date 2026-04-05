@@ -451,6 +451,133 @@ h1.glitch {
 .planned .timeline-date { color: var(--neon-cyan); }
 
 
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: linear-gradient(145deg, rgba(10, 17, 24, 0.8), rgba(5, 10, 14, 0.9));
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 2px;
+    background: linear-gradient(90deg, transparent, #ff5f56, var(--neon-green), transparent);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 255, 65, 0.1);
+    border-color: rgba(0, 255, 65, 0.4);
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card-inner {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    color: var(--neon-green);
+    text-shadow: 0 0 10px rgba(0,255,65,0.3);
+}
+
+.project-links a {
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.project-links a:hover {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(0,240,255,0.5);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+}
+
+.project-description {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-features {
+    list-style: none;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.project-features li {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.project-features li i {
+    color: #ff5f56;
+    margin-top: 4px;
+    font-size: 0.8rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.project-tags .tag {
+    font-size: 0.8rem;
+    font-family: var(--font-heading);
+    color: var(--neon-cyan);
+    background: rgba(0, 240, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    transition: var(--transition);
+}
+
+.project-tags .tag:hover {
+    background: rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0,240,255,0.3);
+}
+
+.project-cta {
+    margin-top: auto;
+}
+
 /* GitHub / Open Source */
 .github-container {
     text-align: center;
@@ -697,6 +824,7 @@ footer {
 }
 @media (max-width: 500px) {
     .tools-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
     h1.glitch { font-size: 2.5rem; }
     .chatbot-window { width: 90vw; bottom: 80px; right: 5vw; }
 }
