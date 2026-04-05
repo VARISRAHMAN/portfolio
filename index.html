@@ -167,58 +167,67 @@
         <section id="projects" class="projects-section reveal">
             <h2 class="section-title"><span>06.</span> Featured Projects</h2>
             <div class="projects-grid">
+                
                 <div class="project-card glass-panel">
+                    <!-- Tech Header overlay -->
+                    <div class="project-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">Target: Vulnerable Order Portal</span>
+                    </div>
+                    
                     <div class="project-card-inner">
                         <div class="project-header">
-                            <i class="fas fa-bug project-icon"></i>
+                            <div class="project-icon-wrapper">
+                                <i class="fas fa-spider project-icon"></i>
+                            </div>
                             <div class="project-links">
                                 <a href="https://github.com/VARISRAHMAN/vulnerable-order-portal.git" target="_blank"
-                                    title="View on GitHub"><i class="fab fa-github"></i></a>
+                                    title="View Source on GitHub"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <h3 class="project-title">Vulnerable Order Portal</h3>
                         <div class="project-description">
-                            <p>Intentionally vulnerable web application for security testing and education. Contains
-                                OWASP Top 10 vulnerabilities including SQL injection, broken access control, and
-                                cryptographic failures.</p>
+                            <p>An intentionally vulnerable web application engineered for penetration testing and educational exploration. Exposes critical vectors including SQL injection, broken access control, and cryptographic failures.</p>
                         </div>
                         <ul class="project-features">
-                            <li><i class="fas fa-caret-right"></i> Customer Order System: Login, view orders, file
-                                uploads</li>
-                            <li><i class="fas fa-caret-right"></i> Admin Dashboard: Unprotected admin panel with full
-                                data access</li>
-                            <li><i class="fas fa-caret-right"></i> REST API: User management with privilege escalation
-                            </li>
-                            <li><i class="fas fa-caret-right"></i> Vulnerabilities: Mapped to OWASP Top 10 2021</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> Customer Order System via Login</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> Unprotected Admin Dashboard Auth</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> RESTful API Privilege Escalation</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> Mapped to modern OWASP Top 10</li>
                         </ul>
                         <div class="project-tags">
-                            <span class="tag">SQL Injection</span>
-                            <span class="tag">OWASP Top 10</span>
-                            <span class="tag">Broken Access Control</span>
-                            <span class="tag">Python</span>
+                            <span class="tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tag"><i class="fas fa-database"></i> SQLi</span>
+                            <span class="tag"><i class="fas fa-key"></i> Broken Access Control</span>
+                            <span class="tag"><i class="fas fa-shield-virus"></i> OWASP Top 10</span>
                         </div>
                         <div class="project-cta">
                             <a href="https://github.com/VARISRAHMAN/vulnerable-order-portal.git" target="_blank"
-                                class="cyber-btn primary"><i class="fab fa-github"></i> View Target</a>
+                                class="cyber-btn primary"><i class="fas fa-crosshairs"></i> Engage Target</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Coming Soon Card -->
-                <div class="project-card glass-panel" style="opacity: 0.7; filter: grayscale(50%);">
-                    <div class="project-card-inner"
-                        style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%; min-height: 350px;">
-                        <i class="fas fa-lock"
-                            style="font-size: 3rem; color: var(--text-muted); margin-bottom: 20px;"></i>
-                        <h3 class="project-title" style="color: var(--text-muted);">Classified Project</h3>
-                        <div class="project-description">
-                            <p>A new security operation is currently under active development. Clearance requires
-                                patience.</p>
+                <div class="project-card glass-panel coming-soon-card">
+                    <div class="project-card-header">
+                        <span class="dot red" style="background:#555"></span>
+                        <span class="dot yellow" style="background:#555"></span>
+                        <span class="dot green" style="background:#555"></span>
+                        <span class="term-title">Classified Operation</span>
+                    </div>
+                    
+                    <div class="project-card-inner encrypted-inner">
+                        <div class="pulse-ring"></div>
+                        <i class="fas fa-lock classified-icon"></i>
+                        <h3 class="project-title">[REDACTED]</h3>
+                        <div class="project-description" style="max-width: 80%;">
+                            <p>A new security tool is currently undergoing active development deep within the labs. Operation details require level 4 clearance.</p>
                         </div>
-                        <div class="project-tags" style="justify-content: center; margin-bottom: 0;">
-                            <span class="tag"
-                                style="color: var(--text-muted); border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05);"><i
-                                    class="fas fa-hourglass-half"></i> Coming Soon</span>
+                        <div class="project-tags" style="justify-content: center; margin-top: 15px;">
+                            <span class="tag scanning-tag"><i class="fas fa-spinner fa-spin"></i> Establishing Connection...</span>
                         </div>
                     </div>
                 </div>
