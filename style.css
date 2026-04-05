@@ -455,99 +455,147 @@ h1.glitch {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 .project-card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background: linear-gradient(145deg, rgba(10, 17, 24, 0.8), rgba(5, 10, 14, 0.9));
-    border: 1px solid var(--glass-border);
+    background: linear-gradient(145deg, rgba(15, 23, 30, 0.8), rgba(5, 10, 14, 0.95));
+    border: 1px solid rgba(0, 255, 65, 0.15);
     position: relative;
     overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
-.project-card::before {
+/* Cyber Grid Background Overlay */
+.project-card::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 2px;
-    background: linear-gradient(90deg, transparent, #ff5f56, var(--neon-green), transparent);
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 255, 65, 0.1);
-    border-color: rgba(0, 255, 65, 0.4);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 255, 65, 0.15);
+    border-color: var(--neon-green);
+    z-index: 10;
 }
 
-.project-card:hover::before {
-    transform: scaleX(1);
+.project-card-header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.project-card-header .term-title {
+    margin-left: 10px;
+    font-family: var(--font-heading);
+    font-size: 0.70rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .project-card-inner {
-    padding: 30px;
+    padding: 35px 30px;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex-grow: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .project-header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.project-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(0, 255, 65, 0.05);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-icon-wrapper {
+    background: rgba(0, 255, 65, 0.1);
+    border-color: var(--neon-green);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+    transform: rotate(-5deg);
 }
 
 .project-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--neon-green);
-    text-shadow: 0 0 10px rgba(0,255,65,0.3);
 }
 
 .project-links a {
     color: var(--text-muted);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     transition: var(--transition);
+    display: inline-block;
 }
 
 .project-links a:hover {
-    color: var(--neon-cyan);
-    text-shadow: 0 0 10px rgba(0,240,255,0.5);
+    color: var(--neon-green);
+    transform: translateY(-3px) scale(1.1);
+    text-shadow: 0 0 15px rgba(0,255,65,0.6);
 }
 
 .project-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--text-main);
     margin-bottom: 15px;
     font-family: var(--font-heading);
+    font-weight: 600;
 }
 
 .project-description {
     color: var(--text-muted);
     font-size: 0.95rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    margin-bottom: 25px;
+    line-height: 1.7;
 }
 
 .project-features {
     list-style: none;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     flex-grow: 1;
 }
 
 .project-features li {
     color: var(--text-muted);
     font-size: 0.9rem;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
 }
 
-.project-features li i {
-    color: #ff5f56;
-    margin-top: 4px;
+.text-neon {
+    color: var(--neon-cyan);
+    margin-top: 3px;
     font-size: 0.8rem;
 }
 
@@ -555,27 +603,92 @@ h1.glitch {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .project-tags .tag {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-family: var(--font-heading);
     color: var(--neon-cyan);
-    background: rgba(0, 240, 255, 0.1);
-    padding: 5px 10px;
+    background: transparent;
+    padding: 6px 12px;
     border-radius: 4px;
-    border: 1px solid rgba(0, 240, 255, 0.2);
+    border: 1px solid rgba(0, 240, 255, 0.3);
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.project-card:hover .project-tags .tag {
+    background: rgba(0, 240, 255, 0.05);
 }
 
 .project-tags .tag:hover {
     background: rgba(0, 240, 255, 0.2);
-    box-shadow: 0 0 10px rgba(0,240,255,0.3);
+    box-shadow: 0 0 15px rgba(0,240,255,0.4);
+    transform: translateY(-2px);
+    color: #fff;
 }
 
 .project-cta {
     margin-top: auto;
+}
+
+/* Coming Soon Card Styling */
+.coming-soon-card {
+    opacity: 0.85;
+    background: linear-gradient(145deg, rgba(15, 15, 15, 0.8), rgba(5, 5, 5, 0.95));
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.coming-soon-card:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.encrypted-inner {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    min-height: 380px;
+}
+
+.classified-icon {
+    font-size: 3.5rem;
+    color: #555;
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.coming-soon-card:hover .classified-icon {
+    color: #888;
+    text-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+.scanning-tag {
+    color: #888 !important;
+    border-color: #444 !important;
+    background: rgba(255,255,255,0.02) !important;
+}
+
+.pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: pulse-ring 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes pulse-ring {
+    0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
 }
 
 /* GitHub / Open Source */
