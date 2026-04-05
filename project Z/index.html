@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varis Rahman | Cybersecurity Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Varis Rahman, Security Researcher and Cybersecurity Student from Calicut, Kerala.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Canvas for Binary Rain -->
+    <canvas id="binary-canvas"></canvas>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">&lt;VR/&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Hero -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content glass-panel reveal">
+                <p class="greeting">System Access Granted...</p>
+                <h1 class="glitch" data-text="VARIS RAHMAN">VARIS RAHMAN</h1>
+                <h2 id="typing-text" class="cyber-subtitle"></h2>
+                <div class="hero-cta">
+                    <a href="#github" class="cyber-btn primary">View GitHub</a>
+                    <a href="#contact" class="cyber-btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section">
+            <h2 class="section-title reveal"><span>01.</span> Whoami</h2>
+            <div class="about-grid reveal">
+                <div class="about-text glass-panel">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">varis@kali:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> cat bio.txt</p>
+                        <p class="bio-text">
+                            Varis Rahman is a cybersecurity student and aspiring security researcher based in Calicut,
+                            Kerala, India. He focuses on penetration testing, vulnerability assessment, and web security
+                            using tools like Burp Suite, Nmap, Metasploit, and Wireshark. As a fresher, he actively
+                            practices on platforms like TryHackMe and Hack The Box while building hands-on skills in
+                            Kali Linux and Python. His interests include red teaming, bug bounty hunting, and real-world
+                            attack simulation aligned with OWASP Top 10. He is currently preparing for CompTIA Security+
+                            and aiming for OSCP certification.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-stats glass-panel">
+                    <div class="stat-item">
+                        <i class="fas fa-id-badge"></i>
+                        <h3>Experience</h3>
+                        <p class="neon-text">Fresher</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Calicut, Kerala, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="skills-section">
+            <h2 class="section-title reveal"><span>02.</span> Skills & Capabilities</h2>
+            <div class="skills-grid reveal">
+                <!-- Skill cards injected via JS -->
+            </div>
+        </section>
+
+        <!-- Tools -->
+        <section id="tools" class="tools-section">
+            <h2 class="section-title reveal"><span>03.</span> Tool Arsenal</h2>
+            <div class="tools-grid reveal">
+                <div class="tool-card glass-panel">
+                    <i class="fas fa-spider"></i>
+                    <h3>Burp Suite</h3>
+                </div>
+                <div class="tool-card glass-panel">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Nmap</h3>
+                </div>
+                <div class="tool-card glass-panel">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3>Metasploit</h3>
+                </div>
+                <div class="tool-card glass-panel">
+                    <i class="fas fa-water"></i>
+                    <h3>Wireshark</h3>
+                </div>
+                <div class="tool-card glass-panel">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="tool-card glass-panel">
+                    <i class="fab fa-linux"></i>
+                    <h3>Kali Linux</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section id="education" class="timeline-section reveal">
+            <div class="duel-column">
+                <div class="edu-col">
+                    <h2 class="section-title"><span>04.</span> Education</h2>
+                    <div class="timeline">
+                        <div class="timeline-item glass-panel">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">2025 – Present</span>
+                            <h3>Cybersecurity Student</h3>
+                            <p>Continuous learning and skill-building in security.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-col">
+                    <h2 class="section-title"><span>05.</span> Certifications</h2>
+                    <div class="timeline">
+                        <div class="timeline-item glass-panel planned">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">Planned</span>
+                            <h3>OSCP</h3>
+                            <p>Offensive Security Certified Professional</p>
+                        </div>
+                        <div class="timeline-item glass-panel in-progress">
+                            <div class="timeline-dot"></div>
+                            <span class="timeline-date">In Progress</span>
+                            <h3>CompTIA Security+</h3>
+                            <p>Global cybersecurity certification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub -->
+        <section id="github" class="auth-section reveal">
+            <h2 class="section-title"><span>06.</span> Open Source</h2>
+            <div class="github-container glass-panel">
+                <i class="fab fa-github github-icon"></i>
+                <h3>View My Repositories</h3>
+                <p>Check out my projects and scripts on GitHub.</p>
+                <a href="https://github.com/VARISRAHMAN" target="_blank" class="cyber-btn primary"><i
+                        class="fab fa-github"></i> github.com/VARISRAHMAN</a>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section reveal">
+            <h2 class="section-title"><span>07.</span> Establish Connection</h2>
+            <div class="contact-container glass-panel">
+                <p>My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get
+                    back to you!</p>
+                <div class="social-links">
+                    <button id="emailBtn" class="social-btn" style="cursor: pointer;"><i
+                            class="fas fa-envelope"></i></button>
+                    <a href="https://github.com/VARISRAHMAN" target="_blank" class="social-btn"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/varis-rahman-7b3995375" target="_blank" class="social-btn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed & Built by Varis Rahman</p>
+        <p class="footer-cyber">System Secured.</p>
+    </footer>
+
+    <!-- Chatbot Popup -->
+    <div class="chatbot-container">
+        <button id="chatbot-toggle" class="chatbot-toggle glass-panel">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div id="chatbot-window" class="chatbot-window glass-panel hidden">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="status-dot"></span>
+                    CyberAssistant AI
+                </div>
+                <button id="chatbot-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message bot-message">
+                    <p>Connection established. Ask me about Varis.</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your query...">
+                <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Trail -->
+    <div class="cursor-glow"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
