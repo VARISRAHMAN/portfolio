@@ -220,12 +220,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /* --- Email Native Mailto Click Handler --- */
-    const emailBtn = document.getElementById("emailBtn");
-    if (emailBtn) {
-        emailBtn.addEventListener("click", function() {
-            window.location.href = "mailto:varis.rahman.in@gamil.com";
-        });
-    }
-
 });
