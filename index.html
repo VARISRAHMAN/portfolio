@@ -7,10 +7,11 @@
     <title>Varis Rahman | Cybersecurity Portfolio</title>
     <meta name="description"
         content="Portfolio of Varis Rahman, Security Researcher and Cybersecurity Student from Calicut, Kerala.">
+    <meta name="theme-color" content="#050a0e">
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,13 +20,14 @@
     <canvas id="binary-canvas"></canvas>
 
     <header>
-        <nav class="glass-nav">
-            <div class="logo">&lt;VR/&gt;</div>
+        <nav class="glass-nav" aria-label="Main navigation">
+            <div class="logo" aria-label="Varis Rahman">&lt;VR/&gt;</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#tools">Tools</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#platforms">Platforms</a></li>
                 <li><a href="#github">GitHub</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -100,31 +102,71 @@
 
         <!-- Tools -->
         <section id="tools" class="tools-section">
-            <h2 class="section-title reveal"><span>03.</span> Tool Arsenal</h2>
-            <div class="tools-grid reveal">
-                <div class="tool-card glass-panel">
-                    <i class="fas fa-spider"></i>
-                    <h3>Burp Suite</h3>
-                </div>
-                <div class="tool-card glass-panel">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Nmap</h3>
-                </div>
-                <div class="tool-card glass-panel">
+            <h2 class="section-title reveal"><span>03.</span> Tools</h2>
+            <div class="skills-grid reveal">
+                <div class="skill-card glass-panel">
                     <i class="fas fa-shield-virus"></i>
                     <h3>Metasploit</h3>
                 </div>
-                <div class="tool-card glass-panel">
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Nmap</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-database"></i>
+                    <h3>SQLMap</h3>
+                </div>
+                <div class="skill-card glass-panel">
                     <i class="fas fa-water"></i>
                     <h3>Wireshark</h3>
                 </div>
-                <div class="tool-card glass-panel">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-hashtag"></i>
+                    <h3>Hashcat</h3>
                 </div>
-                <div class="tool-card glass-panel">
-                    <i class="fab fa-linux"></i>
-                    <h3>Kali Linux</h3>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-spider"></i>
+                    <h3>Burp Suite</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-paper-plane"></i>
+                    <h3>Postman</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>BloodHound</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-bug"></i>
+                    <h3>VirusTotal</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Aircrack-ng</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-search"></i>
+                    <h3>Censys</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>MobSF</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Wazuh</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-user-secret"></i>
+                    <h3>theHarvester</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-crosshairs"></i>
+                    <h3>Nessus</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-eye"></i>
+                    <h3>Shodan</h3>
                 </div>
             </div>
         </section>
@@ -167,7 +209,7 @@
         <section id="projects" class="projects-section reveal">
             <h2 class="section-title"><span>06.</span> Featured Projects</h2>
             <div class="projects-grid">
-                
+
                 <div class="project-card glass-panel">
                     <!-- Tech Header overlay -->
                     <div class="project-card-header">
@@ -176,7 +218,7 @@
                         <span class="dot green"></span>
                         <span class="term-title">Target: Vulnerable Order Portal</span>
                     </div>
-                    
+
                     <div class="project-card-inner">
                         <div class="project-header">
                             <div class="project-icon-wrapper">
@@ -184,12 +226,15 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/VARISRAHMAN/vulnerable-order-portal.git" target="_blank"
-                                    title="View Source on GitHub"><i class="fab fa-github"></i></a>
+                                    rel="noopener noreferrer" title="View Source on GitHub"
+                                    aria-label="View source on GitHub"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                         <h3 class="project-title">Vulnerable Order Portal</h3>
                         <div class="project-description">
-                            <p>An intentionally vulnerable web application engineered for penetration testing and educational exploration. Exposes critical vectors including SQL injection, broken access control, and cryptographic failures.</p>
+                            <p>An intentionally vulnerable web application engineered for penetration testing and
+                                educational exploration. Exposes critical vectors including SQL injection, broken access
+                                control, and cryptographic failures.</p>
                         </div>
                         <ul class="project-features">
                             <li><i class="fas fa-chevron-right text-neon"></i> Customer Order System via Login</li>
@@ -205,7 +250,8 @@
                         </div>
                         <div class="project-cta">
                             <a href="https://github.com/VARISRAHMAN/vulnerable-order-portal.git" target="_blank"
-                                class="cyber-btn primary"><i class="fas fa-crosshairs"></i> Engage Target</a>
+                                rel="noopener noreferrer" class="cyber-btn primary"><i class="fas fa-crosshairs"></i>
+                                Engage Target</a>
                         </div>
                     </div>
                 </div>
@@ -218,17 +264,141 @@
                         <span class="dot green" style="background:#555"></span>
                         <span class="term-title">Classified Operation</span>
                     </div>
-                    
+
                     <div class="project-card-inner encrypted-inner">
                         <div class="pulse-ring"></div>
                         <i class="fas fa-lock classified-icon"></i>
                         <h3 class="project-title">[REDACTED]</h3>
                         <div class="project-description" style="max-width: 80%;">
-                            <p>A new security tool is currently undergoing active development deep within the labs. Operation details require level 4 clearance.</p>
+                            <p>A new security tool is currently undergoing active development deep within the labs.
+                                Operation details require level 4 clearance.</p>
                         </div>
                         <div class="project-tags" style="justify-content: center; margin-top: 15px;">
-                            <span class="tag scanning-tag"><i class="fas fa-spinner fa-spin"></i> Establishing Connection...</span>
+                            <span class="tag scanning-tag"><i class="fas fa-spinner fa-spin"></i> Establishing
+                                Connection...</span>
                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Platforms & Profiles -->
+        <section id="platforms" class="platforms-section reveal">
+            <h2 class="section-title"><span>07.</span> Platforms & Profiles</h2>
+
+            <!-- Subsection: Hands-On Platforms -->
+            <h3 class="platforms-subtitle"><i class="fas fa-terminal"></i> Hands-On Platforms</h3>
+            <div class="platforms-grid">
+
+                <!-- TryHackMe -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">tryhackme.com</span>
+                    </div>
+                    <div class="platform-card-inner">
+                        <div class="platform-icon-wrapper">
+                            <i class="fas fa-flag platform-icon"></i>
+                        </div>
+                        <h3 class="platform-title">TryHackMe</h3>
+                        <p class="platform-description">Hands-on cybersecurity labs, red team & blue team learning,
+                            practical penetration testing practice</p>
+                        <a href="https://tryhackme.com/p/varis.rahman.in" target="_blank" rel="noopener noreferrer"
+                            class="cyber-btn primary" aria-label="View TryHackMe profile"><i
+                                class="fas fa-external-link-alt"></i> View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Hack The Box -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">hackthebox.com</span>
+                    </div>
+                    <div class="platform-card-inner">
+                        <div class="platform-icon-wrapper">
+                            <i class="fas fa-cube platform-icon"></i>
+                        </div>
+                        <h3 class="platform-title">Hack The Box</h3>
+                        <p class="platform-description">Real-world vulnerable machines, CTF challenges, offensive
+                            security skill development</p>
+                        <a href="https://profile.hackthebox.com/profile/019d20ef-b7ce-71a6-8ed0-ac5afbedb4f2"
+                            target="_blank" rel="noopener noreferrer" class="cyber-btn primary"
+                            aria-label="View Hack The Box profile"><i class="fas fa-external-link-alt"></i> View
+                            Profile</a>
+                    </div>
+                </div>
+
+                <!-- PortSwigger -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">portswigger.net</span>
+                    </div>
+                    <div class="platform-card-inner">
+                        <div class="platform-icon-wrapper">
+                            <i class="fas fa-flask platform-icon"></i>
+                        </div>
+                        <h3 class="platform-title">PortSwigger Web Security Academy</h3>
+                        <p class="platform-description">Web application security labs covering XSS, SQLi,
+                            authentication, and logic flaws</p>
+                        <a href="https://portswigger.net/users/varis.rahman.in" target="_blank"
+                            rel="noopener noreferrer" class="cyber-btn primary" aria-label="View PortSwigger profile"><i
+                                class="fas fa-external-link-alt"></i> View Profile</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Subsection: Social Media -->
+            <h3 class="platforms-subtitle"><i class="fas fa-share-alt"></i> Social Media</h3>
+            <div class="platforms-grid">
+
+                <!-- X (Twitter) -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">x.com</span>
+                    </div>
+                    <div class="platform-card-inner">
+                        <div class="platform-icon-wrapper social-icon-wrapper">
+                            <i class="fab fa-x-twitter platform-icon"></i>
+                        </div>
+                        <h3 class="platform-title">X (Twitter)</h3>
+                        <p class="platform-description">Cybersecurity updates, learning notes, and technical sharing</p>
+                        <a href="https://x.com/Varis1310783" target="_blank" rel="noopener noreferrer"
+                            class="cyber-btn primary" aria-label="View X Twitter profile"><i
+                                class="fas fa-external-link-alt"></i> View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="platform-card glass-panel">
+                    <div class="platform-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">instagram.com</span>
+                    </div>
+                    <div class="platform-card-inner">
+                        <div class="platform-icon-wrapper social-icon-wrapper">
+                            <i class="fab fa-instagram platform-icon"></i>
+                        </div>
+                        <h3 class="platform-title">Instagram</h3>
+                        <p class="platform-description">Personal brand, tech journey, and cybersecurity learning
+                            highlights</p>
+                        <a href="https://www.instagram.com/variiis_m?igsh=bjljbmFhcmZsazQy" target="_blank"
+                            rel="noopener noreferrer" class="cyber-btn primary" aria-label="View Instagram profile"><i
+                                class="fas fa-external-link-alt"></i> View Profile</a>
                     </div>
                 </div>
 
@@ -237,28 +407,30 @@
 
         <!-- GitHub -->
         <section id="github" class="auth-section reveal">
-            <h2 class="section-title"><span>07.</span> Open Source</h2>
+            <h2 class="section-title"><span>08.</span> Open Source</h2>
             <div class="github-container glass-panel">
                 <i class="fab fa-github github-icon"></i>
                 <h3>View My Repositories</h3>
                 <p>Check out my projects and scripts on GitHub.</p>
-                <a href="https://github.com/VARISRAHMAN" target="_blank" class="cyber-btn primary"><i
-                        class="fab fa-github"></i> github.com/VARISRAHMAN</a>
+                <a href="https://github.com/VARISRAHMAN" target="_blank" rel="noopener noreferrer"
+                    class="cyber-btn primary" aria-label="Visit GitHub profile"><i class="fab fa-github"></i>
+                    github.com/VARISRAHMAN</a>
             </div>
         </section>
 
         <!-- Contact -->
         <section id="contact" class="contact-section reveal">
-            <h2 class="section-title"><span>08.</span> Establish Connection</h2>
+            <h2 class="section-title"><span>09.</span> Establish Connection</h2>
             <div class="contact-container glass-panel">
                 <p>My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get
                     back to you!</p>
                 <div class="social-links">
-                    <button id="emailBtn" class="social-btn" style="cursor: pointer;"><i
-                            class="fas fa-envelope"></i></button>
-                    <a href="https://github.com/VARISRAHMAN" target="_blank" class="social-btn"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/varis-rahman-7b3995375" target="_blank" class="social-btn"><i
+                    <a href="mailto:varis.rahman.in@gmail.com" class="social-btn" aria-label="Send email"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/VARISRAHMAN" target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/varis-rahman-7b3995375" target="_blank"
+                        rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn profile"><i
                             class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
@@ -272,7 +444,7 @@
 
     <!-- Chatbot Popup -->
     <div class="chatbot-container">
-        <button id="chatbot-toggle" class="chatbot-toggle glass-panel">
+        <button id="chatbot-toggle" type="button" class="chatbot-toggle glass-panel" aria-label="Open chat assistant">
             <i class="fas fa-robot"></i>
         </button>
         <div id="chatbot-window" class="chatbot-window glass-panel hidden">
@@ -281,7 +453,7 @@
                     <span class="status-dot"></span>
                     CyberAssistant AI
                 </div>
-                <button id="chatbot-close"><i class="fas fa-times"></i></button>
+                <button id="chatbot-close" type="button" aria-label="Close chat"><i class="fas fa-times"></i></button>
             </div>
             <div class="chat-body" id="chat-body">
                 <div class="message bot-message">
@@ -289,8 +461,9 @@
                 </div>
             </div>
             <div class="chat-input-area">
-                <input type="text" id="chat-input" placeholder="Type your query...">
-                <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+                <input type="text" id="chat-input" placeholder="Type your query..." aria-label="Chat message input">
+                <button id="chat-send" type="button" aria-label="Send message"><i
+                        class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
