@@ -22,7 +22,13 @@
     <header>
         <nav class="glass-nav" aria-label="Main navigation">
             <div class="logo" aria-label="Varis Rahman">&lt;VR/&gt;</div>
-            <ul class="nav-links">
+            <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation menu"
+                aria-expanded="false" aria-controls="nav-links">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#tools">Tools</a></li>
@@ -95,7 +101,7 @@
         <!-- Skills -->
         <section id="skills" class="skills-section">
             <h2 class="section-title reveal"><span>02.</span> Skills & Capabilities</h2>
-            <div class="skills-grid reveal">
+            <div class="skills-grid reveal" id="skills-grid">
                 <!-- Skill cards injected via JS -->
             </div>
         </section>
@@ -167,6 +173,14 @@
                 <div class="skill-card glass-panel">
                     <i class="fas fa-eye"></i>
                     <h3>Shodan</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Splunk</h3>
+                </div>
+                <div class="skill-card glass-panel">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>TheHive</h3>
                 </div>
             </div>
         </section>
@@ -250,6 +264,56 @@
                         </div>
                         <div class="project-cta">
                             <a href="https://github.com/VARISRAHMAN/vulnerable-order-portal.git" target="_blank"
+                                rel="noopener noreferrer" class="cyber-btn primary"><i class="fas fa-crosshairs"></i>
+                                Engage Target</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SSH Brute-Force Detection Alert Pipeline -->
+                <div class="project-card glass-panel">
+                    <div class="project-card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="term-title">Target: SOC Detection Pipeline</span>
+                    </div>
+
+                    <div class="project-card-inner">
+                        <div class="project-header">
+                            <div class="project-icon-wrapper">
+                                <i class="fas fa-satellite-dish project-icon"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/VARISRAHMAN/SSH-Brute-Force-Detection-Pipeline" target="_blank"
+                                    rel="noopener noreferrer" title="View Source on GitHub"
+                                    aria-label="View source on GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">SSH Brute-Force Detection Alert Pipeline</h3>
+                        <div class="project-description">
+                            <p>A fully automated Blue Team / SOC lab across two VirtualBox VMs, simulating a
+                                real SSH brute-force attack end-to-end: from a Hydra attack, to detection in
+                                Splunk, to an auto-created case in TheHive — with zero manual steps.</p>
+                        </div>
+                        <ul class="project-features">
+                            <li><i class="fas fa-chevron-right text-neon"></i> Hydra attack → auth.log → Splunk
+                                Universal Forwarder</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> Custom SPL rule fires a scheduled
+                                alert on brute-force patterns</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> Alert triggers an HTTP webhook to a
+                                Python Flask service</li>
+                            <li><i class="fas fa-chevron-right text-neon"></i> Flask auto-creates a triage-ready
+                                case in TheHive in under 2 minutes</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag"><i class="fas fa-terminal"></i> Hydra</span>
+                            <span class="tag"><i class="fas fa-chart-line"></i> Splunk</span>
+                            <span class="tag"><i class="fab fa-python"></i> Flask</span>
+                            <span class="tag"><i class="fas fa-briefcase"></i> TheHive</span>
+                        </div>
+                        <div class="project-cta">
+                            <a href="https://github.com/VARISRAHMAN/SSH-Brute-Force-Detection-Pipeline" target="_blank"
                                 rel="noopener noreferrer" class="cyber-btn primary"><i class="fas fa-crosshairs"></i>
                                 Engage Target</a>
                         </div>
@@ -429,7 +493,7 @@
                             class="fas fa-envelope"></i></a>
                     <a href="https://github.com/VARISRAHMAN" target="_blank" rel="noopener noreferrer"
                         class="social-btn" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/varis-rahman-" target="_blank"
+                    <a href="https://www.linkedin.com/in/varis-rahman-7b3995375" target="_blank"
                         rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn profile"><i
                             class="fab fa-linkedin-in"></i></a>
                 </div>
